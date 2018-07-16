@@ -19,7 +19,9 @@ export default function Root() {
     </WebSocketProvider>
   );
 }
+```
 
+```
 // App.jsx
 import React, { Component } from 'react';
 import { instanceOf } from 'prop-types';
