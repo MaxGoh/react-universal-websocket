@@ -1,13 +1,14 @@
 {
   "name": "react-universal-websocket",
   "version": "1.0.0",
-  "description": "Universal WebSocket Provider for Universal Applications",
+  "description": "Universal WebSocket Provider for Universal React Applications",
   "main": "lib/index.js",
   "repository": "git@github.com:MaxGoh/React-Web-Socket.git",
   "author": "Max Goh <themaxgohjh@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "rimraf lib && babel src -d lib --ignore __tests__"
+    "build": "rimraf lib && babel src -d lib --ignore __tests__",
+    "precommit": "lint-staged"
   },
   "lint-staged": {
     "*.{js,jsx}": [
@@ -19,7 +20,6 @@
       "prettier --write"
     ]
   },
-  "commitplease": {
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
