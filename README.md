@@ -25,11 +25,11 @@ export default function Root() {
 // App.jsx
 import React, { Component } from 'react';
 import { instanceOf } from 'prop-types';
-import { withWebSocket, WebSocket } from 'react-cookie';
+import { withWebSocket, WebSocket } from 'react-universal-websocket';
 
 class App extends Component {
   static propTypes = {
-    socket: instanceOf(Cookies).isRequired
+    socket: instanceOf(WebSocket).isRequired
   };
 
   constructor(props) {
