@@ -1,0 +1,48 @@
+{
+  "name": "react-universal-websocket",
+  "version": "1.0.0",
+  "description": "Universal WebSocket Provider for Universal Applications",
+  "main": "lib/index.js",
+  "repository": "git@github.com:MaxGoh/React-Web-Socket.git",
+  "author": "Max Goh <themaxgohjh@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf lib && babel src -d lib --ignore __tests__"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{json}": [
+      "prettier --write"
+    ]
+  },
+  "commitplease": {
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-export-default": "^7.0.0-alpha.20",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.10.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.13.7",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "dependencies": {
+    "hoist-non-react-statics": "^2.5.5",
+    "isomorphic-ws": "^4.0.1",
+    "ws": "^5.2.2"
+  }
+}
