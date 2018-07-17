@@ -44,7 +44,7 @@ class WebSocketProvider extends Component {
   }
 
   logStatus(logMessage) {
-    if (this.props.debug) console.log('WebSocket: ', logMessage)
+    if (this.props.debug) console.log(new Date() + 'WebSocket: ', logMessage)
   }
 
   getChildContext() {
