@@ -1,5 +1,7 @@
 # React-Universal-WebSocket
 
+Websocket Provider for Universal React
+
 ### Installation
 
 `$ yarn add react-universal-websocket`
