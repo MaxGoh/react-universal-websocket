@@ -28,23 +28,23 @@ class WebSocketProvider extends Component {
     let webSocket = this.socket
 
     webSocket.onopen = () => {
-      this.logStatus('Open')
+      this.logStatus('Socket Open')
       if (typeof onOpen === 'function') onOpen(webSocket)
-    }
 
-    webSocket.onmessage = event => {
-      this.logStatus('Message')
-      if (typeof onMesssage === 'function') onMessage(webSocket, event.data)
-    }
+      webSocket.onmessage = event => {
+        this.logStatus('Message: ', event)
+        onMessage(webSocket, event.data)
+      }
 
-    webSocket.onclose = () => {
-      this.logStatus('Close')
-      if (typeof onClose === 'function') onClose()
+      webSocket.onclose = () => {
+        this.logStatus('Socket Close')
+        if (typeof onClose === 'function') onClose()
+      }
     }
   }
 
   logStatus(logMessage) {
-    if (this.props.debug) console.log(new Date() + 'WebSocket: ', logMessage)
+    if (this.props.debug) console.log(new Date() + ' WebSocket: ', logMessage)
   }
 
   getChildContext() {
